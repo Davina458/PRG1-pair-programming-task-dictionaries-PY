@@ -41,14 +41,14 @@ def get_books_by_author(library, author_name):
 def search_by_book_name(library, search_term):
     for book in library:
         if book["title"] == search_term:
-            return True
+            return book
     return False
 
 
 
 def display_loan_totals():
     onloan = 0
-    not_on_loan. = 0
+    not_on_loan = 0
     for book in library:
         if book["isLoaned"] == True:
             onloan += 1
@@ -75,7 +75,7 @@ def add_new_book(library, title, author, is_loaned):
 
 def remove_book(library, book_title):
     for book in range(len(library)):
-        if book[i]["title"] == book_title:
+        if library[book]["title"] == book_title:
             library.pop(book)
             return library
     return 
